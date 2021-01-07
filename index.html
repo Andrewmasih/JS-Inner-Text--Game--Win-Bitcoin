@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>innerText Example</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <p>Enemy Hit Points: <span id="hp">20</span></p>
+    <button onclick="decrementHP()">Attack!</button>
+    <script>
+      function decrementHP() {
+        // Get element with the id of hp
+        let el = document.getElementById("hp");
+        // Set currentCount to the text of the element
+        let currentCount = el.innerText;
+
+        if (currentCount == 0) {
+          alert("You've won!!");
+        } else {
+          // Decrement current count and set it as the new text in our element
+          el.innerText = --currentCount;
+        }
+      }
+    </script>
+  </body>
+</html>
